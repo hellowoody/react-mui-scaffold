@@ -1,10 +1,10 @@
 {
   "name": "react-mui-scaffold",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "react-mui-scaffold",
   "author": "woodyhello",
   "license": "MIT",
-  "repository": "woodyhello/react-mui-scaffold",
+  "repository": "hellowoody/react-mui-scaffold",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
