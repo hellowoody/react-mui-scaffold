@@ -55,23 +55,12 @@ const useStyles = makeStyles(theme => ({
         duration: theme.transitions.duration.leavingScreen,
         }),
     },
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width'], {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    contentTopbox:{
-        marginTop:64
-    }
 }));
 
 function Layout(props){
     const classes = useStyles()
     const {children} = props;
     const [open,setOpen] = React.useState(false)
-
     const handleDrawerOpen = function(){
         setOpen(true);
     };
@@ -96,6 +85,7 @@ function Layout(props){
                             },
                             'PaperProps':{ style: { width: drawerWidth  }} ,
                             'handleDrawerClose':handleDrawerClose,
+                            'handleDrawerOpen':handleDrawerOpen,
                             'open':open,
                         });
                     }
@@ -109,19 +99,11 @@ function Layout(props){
                             return React.cloneElement(child,{
                                 'classes':{
                                     "appBar":classes.appBar,
-                                    "appBarShift":classes.appBarShift,
-                                    "hide":classes.hide,
                                 },
-                                'handleDrawerOpen':handleDrawerOpen,
-                                'open':open,
                             });
                         }
                         if (child.type.name !== "SideBar" && child.type.name !== "TopBar") {
-                            return React.cloneElement(child,{
-                                'classes':{
-                                    "topbox":classes.contentTopbox,
-                                },
-                            });
+                            return React.cloneElement(child);
                         }
                         return null
                     })

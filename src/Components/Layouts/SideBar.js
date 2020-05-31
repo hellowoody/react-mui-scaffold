@@ -5,9 +5,10 @@ import {
     IconButton
 } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import MenuIcon from '@material-ui/icons/Menu';
 
 function SideBar(props){
-    const {classes,children,handleDrawerClose,open} = props
+    const {classes,children,handleDrawerOpen,handleDrawerClose,open} = props
     return (
         <Drawer variant="permanent"  
             className={clsx({
@@ -24,6 +25,9 @@ function SideBar(props){
             <div className={classes.drawerBack}>
                 <IconButton className={clsx({[classes.hide]:!open})} onClick={()=>handleDrawerClose()}>
                     <ChevronLeftIcon />
+                </IconButton>
+                <IconButton className={clsx({[classes.hide]:open})} onClick={()=>handleDrawerOpen()}>
+                    <MenuIcon />
                 </IconButton>
             </div>
             {children}

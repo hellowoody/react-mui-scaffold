@@ -1,31 +1,17 @@
 import React from 'react'
 import clsx from 'clsx';
-import {AppBar,Toolbar,IconButton} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import {AppBar,Toolbar} from '@material-ui/core';
 
 function TopBar(props){
-    const { classes,children,open,handleDrawerOpen,color} = props;
+    const { classes,children,color} = props;
     return (
         <AppBar 
           color={color}
-          position="fixed" 
+          position="sticky" 
           elevation={0}
-          className={clsx(classes.appBar,{
-            [classes.appBarShift]: open,
-          })}
+          className={clsx(classes.appBar)}
         >
-          <Toolbar style={{paddingLeft:16}}>
-                <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={handleDrawerOpen}
-                    edge="start"
-                    className={clsx({
-                      [classes.hide]: open,
-                    })}
-                >
-                    <MenuIcon />
-                </IconButton>
+          <Toolbar>
               {children}
           </Toolbar>
         </AppBar>
