@@ -1,0 +1,29 @@
+{
+  "name": "react-mui-scaffold-example",
+  "homepage": "https://woodyhello.github.io/react-mui-scaffold",
+  "version": "0.0.0",
+  "private": false,
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-mui-scaffold": "link:..",
+    "react-scripts": "link:../node_modules/react-scripts"
+  },
+  "scripts": {
+    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
