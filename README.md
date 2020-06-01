@@ -36,7 +36,7 @@ export default App;
 
 ## Screenshot simple black
 
-![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/blank.png)
+![image](https://raw.githubusercontent.com/hellowoody/react-mui-scaffold/master/assets/img/blank.png)
 
 ## Usage with theme
 
@@ -225,8 +225,8 @@ export default App;
 
 ## Screenshot with theme
 
-![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/with_theme.png)
-![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/with_theme2.png)
+![image](https://raw.githubusercontent.com/hellowoody/react-mui-scaffold/master/assets/img/with_theme.png)
+![image](https://raw.githubusercontent.com/hellowoody/react-mui-scaffold/master/assets/img/with_theme2.png)
 
 ## License
 
