@@ -33,6 +33,9 @@ function App() {
 
 export default App;
 ```
+
+## Screenshot simple black
+
 ![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/blank.png)
 
 ## Usage with theme
@@ -219,6 +222,8 @@ function App() {
 export default App;
 
 ```
+
+## Screenshot with theme
 
 ![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/with_theme.png)
 ![image](https://github.com/hellowoody/react-mui-scaffold/blob/master/assets/img/with_theme2.png)
