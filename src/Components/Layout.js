@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
     drawer: {
         width: drawerWidth,
         whiteSpace: 'nowrap',
-        // backgroundColor:'#dce1ee',
         borderRight:'0px',
         flexShrink: 0,
     },
@@ -33,13 +32,13 @@ const useStyles = makeStyles(theme => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
         overflowX: 'hidden',
-        width: theme.spacing(7) + 1,
+        width: theme.spacing(6) + 1,
     },
-    drawerBack: {
+    drawerToggle: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        padding: theme.spacing(0, 1),
+        // padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
     },
@@ -81,7 +80,7 @@ function Layout(props){
                                 "drawer":classes.drawer,
                                 "drawerOpen":classes.drawerOpen,
                                 "drawerClose":classes.drawerClose,
-                                "drawerBack":classes.drawerBack,
+                                "drawerToggle":classes.drawerToggle,
                             },
                             'PaperProps':{ style: { width: drawerWidth  }} ,
                             'handleDrawerClose':handleDrawerClose,

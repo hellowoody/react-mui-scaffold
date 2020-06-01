@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import {
     Drawer,
     IconButton
@@ -8,7 +9,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 
 function SideBar(props){
-    const {classes,children,handleDrawerOpen,handleDrawerClose,open} = props
+    const {classes,DrawerClass,IconButtonClass,children,handleDrawerOpen,handleDrawerClose,open} = props
     return (
         <Drawer variant="permanent"  
             className={clsx({
@@ -16,17 +17,17 @@ function SideBar(props){
                 [classes.drawerClose]: !open,
             })}
             classes={{
-                paper: clsx(classes.drawer,{
+                paper: clsx(classes.drawer,DrawerClass,{
                     [classes.drawerOpen]: open,
                     [classes.drawerClose]: !open,
                 }),
             }}
         >
-            <div className={classes.drawerBack}>
-                <IconButton className={clsx({[classes.hide]:!open})} onClick={()=>handleDrawerClose()}>
+            <div className={classes.drawerToggle}>
+                <IconButton className={clsx(IconButtonClass,{[classes.hide]:!open})} onClick={()=>handleDrawerClose()}>
                     <ChevronLeftIcon />
                 </IconButton>
-                <IconButton className={clsx({[classes.hide]:open})} onClick={()=>handleDrawerOpen()}>
+                <IconButton className={clsx(IconButtonClass,{[classes.hide]:open})} onClick={()=>handleDrawerOpen()}>
                     <MenuIcon />
                 </IconButton>
             </div>
@@ -34,5 +35,10 @@ function SideBar(props){
         </Drawer>
     )
 }
+
+SideBar.propTypes = {
+    DrawerClass: PropTypes.string,
+    IconButtonClass: PropTypes.string,
+};
 
 export default SideBar
