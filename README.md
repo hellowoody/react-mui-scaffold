@@ -7,10 +7,11 @@
 ## Install
 
 ```bash
+yarn add react-mui-scaffold --save
 npm install --save react-mui-scaffold
 ```
 
-## Usage simple black
+## Usage simple blank
 
 ```jsx
 import React from 'react';
@@ -34,7 +35,7 @@ function App() {
 export default App;
 ```
 
-## Screenshot simple black
+## Screenshot simple blank
 
 ![image](https://raw.githubusercontent.com/hellowoody/react-mui-scaffold/master/assets/img/blank.png)
 
