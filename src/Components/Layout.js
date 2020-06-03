@@ -67,13 +67,13 @@ function Layout(props){
     const handleDrawerClose = () => {
         setOpen(false);
     };
-
+    
     return (
         <div className={classes.root}>
             <CssBaseline />
             {
                 React.Children.map(children,(child) => {
-                    if (child.type.name === "SideBar") {
+                    if (child.key === "SideBar") {
                         return React.cloneElement(child,{
                             'classes':{
                                 "hide":classes.hide,
@@ -94,14 +94,14 @@ function Layout(props){
             <App classes={{"root":classes.app}}>
                 {
                     React.Children.map(children,(child) => {
-                        if (child.type.name === "TopBar") {
+                        if (child.key === "TopBar") {
                             return React.cloneElement(child,{
                                 'classes':{
                                     "appBar":classes.appBar,
                                 },
                             });
                         }
-                        if (child.type.name !== "SideBar" && child.type.name !== "TopBar") {
+                        if (child.key !== "SideBar" && child.key !== "TopBar") {
                             return React.cloneElement(child);
                         }
                         return null

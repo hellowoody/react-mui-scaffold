@@ -21,10 +21,10 @@ import {TopBar,SideBar,Content} from './Components/Layouts'
 function App() {
   return (
       <Layout>
-        <SideBar>
+        <SideBar  key="SideBar" labelname="SideBar">
           边栏
         </SideBar>
-        <TopBar>
+        <TopBar  key="TopBar" labelname="TopBar">
           React MUI Scaffold 脚手架
         </TopBar>
         <Content>页面内容</Content>
@@ -163,7 +163,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SideBar DrawerClass={classes.sidebarDrawer} IconButtonClass={classes.sidebarIconButton}>
+        <SideBar key="SideBar" labelname="SideBar" DrawerClass={classes.sidebarDrawer} IconButtonClass={classes.sidebarIconButton}>
           <List disablePadding>
             <ListItem className={clsx(classes.item, classes.itemCategory)}>
               <ListItemIcon className={classes.itemIcon}>
@@ -192,7 +192,7 @@ function App() {
             }
           </List>
         </SideBar>
-        <TopBar color={"primary"} className={classes.appbar}>
+        <TopBar key="TopBar" labelname="TopBar" color={"primary"} className={classes.appbar}>
           <Grid container spacing={1} direction="row" alignItems="center" justify="flex-end">
             <Grid item xs={true}>
               <Link className={classes.link} href="#" variant="body2">

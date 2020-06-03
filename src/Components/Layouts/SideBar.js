@@ -39,6 +39,7 @@ function SideBar(props){
 SideBar.propTypes = {
     DrawerClass: PropTypes.string,
     IconButtonClass: PropTypes.string,
+    labelname: PropTypes.string.isRequired
 };
 
 export default SideBar

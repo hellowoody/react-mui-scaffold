@@ -21,7 +21,8 @@ function TopBar(props){
 
 TopBar.propTypes = {
   className: PropTypes.string,
-  color:PropTypes.string
+  color:PropTypes.string,
+  labelname: PropTypes.string.isRequired
 };
 
 export default TopBar
